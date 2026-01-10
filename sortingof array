@@ -1,0 +1,36 @@
+// Print array in reverse order
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n{};
+    cout << "Enter the size of array: ";
+    cin >> n;
+    int arr[n];
+    // loop for input array element;
+    cout << "Enter the elements of array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    // now start sorting in asending order;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[i] > arr[j])
+            {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    // now print the output data of given array like asending the array;
+    cout << "Sorted array in ascending order:\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
