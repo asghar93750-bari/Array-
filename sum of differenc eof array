@@ -1,0 +1,16 @@
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int sumOfDifferences(const vector<int>& arr) {
+    if (arr.size() < 2) return 0;
+
+    vector<int> v = arr;
+    sort(v.begin(), v.end(), greater<int>());
+
+    int sum = 0;
+    for (int i = 0; i < v.size() - 1; i++) {
+        sum += v[i] - v[i + 1];
+    }
+    return sum;
+}
