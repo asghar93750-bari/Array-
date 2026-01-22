@@ -1,0 +1,13 @@
+#include <vector>
+
+double calcAverage(const std::vector<int>& values) {
+    if (values.empty())
+        return 0.0;   // avoid division by zero
+
+    double sum = 0;
+    for (int v : values) {
+        sum += v;
+    }
+
+    return sum / values.size();
+}
