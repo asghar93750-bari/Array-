@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+double getVolumeOfCuboid(double length, double width, double height) {
+    return length * width * height;
+}
+int main() {
+    double length, width, height;
+    cout << "Enter length: ";
+    cin >> length;
+    cout << "Enter width: ";
+    cin >> width;
+    cout << "Enter height: ";
+    cin >> height;
+    double volume = getVolumeOfCuboid(length, width, height);
+    cout << "Volume of the cuboid is: " << volume << endl;
+    return 0;
+}
