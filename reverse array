@@ -1,0 +1,10 @@
+vector<int> reverseSeq(int n) {
+    vector<int> arr;      // empty array
+    
+    for(int i = n; i >= 1; i--) {
+        arr.push_back(i); // store number
+    }   
+    arr.push_back(i);   // ❌ problem here
+    
+    return arr;
+}
